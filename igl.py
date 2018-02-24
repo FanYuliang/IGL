@@ -12,12 +12,12 @@ class Network:
 				proteinlist.append(protein())
 			self.proteincomplex = np.array([])
 			self.score = 0;
-			self.amount = 4#intial = 4 concentration = 1/4 each 
+			self.amount = 4#intial = random 
 
 
 
 
-		class protein:# gene and protein are 1-1 initially
+		class protein:# gene and protein are 1-1 initially////////da/dt
 			class gene:
 				pass
 			
@@ -27,6 +27,7 @@ class Network:
 				rates.append(np.random.uniform(0,1))
 				self.gene = []
 				gene.append(gene())
+				intialamount = rand()
 
 		def mutateinCell(self,n):
 		#5 cases:
@@ -157,6 +158,8 @@ class Network:
 		rv = 0
 
 
+net = Cell(10)
+net.mutate()
 
 
 	
