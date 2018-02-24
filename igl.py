@@ -14,7 +14,19 @@ class Network:
 			self.score = 0;
 			self.amount = 4#intial = random 
 
+		def addGene(self):##does gene and protein needs to occur pairly?suppose add.
+			proteinlist.append(protein())
+			amount += 2
 
+	    def addProtein(self):
+			proteinlist.append(protein())
+			amount += 2
+
+
+		def changeDegradeorProduction(self):
+			for j in proteinlist:
+				j.rates[0] *= np.random.uniform(0,2)
+				j.rates[1] *= np.random.uniform(0,2)
 
 
 		class protein:# gene and protein are 1-1 initially////////da/dt
@@ -28,18 +40,6 @@ class Network:
 				self.gene = []
 				gene.append(gene())
 				intialamount = rand()
-
-		def addGene(self):##does gene and protein needs to occur pairly?suppose add.
-			proteinlist.append(protein())
-
-	    def addProtein(self):
-			proteinlist.append(protein())
-
-
-		def changeDegradeorProduction(self):
-			for j in proteinlist:
-				j.rates[0] *= np.random.uniform(0,2)
-				j.rates[1] *= np.random.uniform(0,2)
 
 
 
