@@ -29,6 +29,20 @@ class Network:
 				gene.append(gene())
 				intialamount = rand()
 
+		def addGene(self):##does gene and protein needs to occur pairly?suppose add.
+			proteinlist.append(protein())
+
+	    def addProtein(self):
+			proteinlist.append(protein())
+
+
+		def changeDegradeorProduction(self):
+			for j in proteinlist:
+				j.rates[0] *= np.random.uniform(0,2)
+				j.rates[1] *= np.random.uniform(0,2)
+
+
+
 		def mutateinCell(self,n):
 		#5 cases:
 			situation = randi(1,5)
@@ -129,21 +143,6 @@ class Network:
 
 
 
-	def changeDegradeorProduction(self):
-		for i in cells:
-			for j in i.proteinlist:
-				j.rates[0] *= np.random.uniform(0,2)
-				j.rates[1] *= np.random.uniform(0,2)
-
-	def addGene(self):##does gene and protein needs to occur pairly?suppose add.
-		for i in cells:
-			i.proteinlist.append(protein())
-			amount+=2
-
-	def addProtein(self):
-		for i in cells:
-			i.proteinlist.append(protein())
-			amount+=2
 
 #mutation part:
 
